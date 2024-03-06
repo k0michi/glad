@@ -7,8 +7,8 @@ $ git clone https://github.com/k0michi/glad
 $ cd glad
 $ pip install -r requirements.txt
 
-$ python -m glad --api='gl:core=4.6' --out-path build c --mx-global
-$ python -m glad --api='gles2=3.2' --out-path build c --mx-global
+$ python -m glad --api='gl:core=4.6' --out-path build c --loader --mx --mx-global
+$ python -m glad --api='gles2=3.2' --out-path build c --loader --mx --mx-global
 ```
 
 ---
