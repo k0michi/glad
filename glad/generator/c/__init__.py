@@ -6,7 +6,7 @@ import re
 from collections import namedtuple
 from contextlib import closing
 
-from glad.config import Config, ConfigOption, UnsupportedConstraint
+from glad.config import Config, ConfigOption, UnsupportedConstraint, RequirementConstraint
 from glad.sink import LoggingSink
 from glad.generator import JinjaGenerator
 from glad.generator.util import (
@@ -246,9 +246,9 @@ class CConfig(Config):
     )
 
     __constraints__ = [
-        UnsupportedConstraint(['MX_GLOBAL'], 'MX'),
+        RequirementConstraint(['MX_GLOBAL'], 'MX'),
         UnsupportedConstraint(['MX'], 'DEBUG'),
-        UnsupportedConstraint(['MX', 'DEBUG'], 'MX_GLOBAL'),
+        RequirementConstraint(['MX', 'DEBUG'], 'MX_GLOBAL'),
         UnsupportedConstraint(['MX'], 'ON_DEMAND')
     ]
 
