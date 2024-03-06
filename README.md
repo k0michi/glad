@@ -1,3 +1,18 @@
+This is a [glad](https://github.com/Dav1dde/glad) fork with `MX_GLOBAL` enabled.
+
+## Usage example
+
+```
+$ git clone https://github.com/k0michi/glad
+$ cd glad
+$ pip install -r requirements.txt
+
+$ python -m glad --api='gl:core=4.6' --out-path build c --mx-global
+$ python -m glad --api='gles2=3.2' --out-path build c --mx-global
+```
+
+---
+
 glad
 ====
 
