@@ -11,6 +11,13 @@ $ python -m glad --api='gl:core=4.6' --out-path build c --loader --mx --mx-globa
 $ python -m glad --api='gles2=3.2' --out-path build c --loader --mx --mx-global
 ```
 
+## Usage example with Docker
+
+```
+$ docker build -t glad .
+$ docker run --rm -v "$PWD/build":/app/build glad python -m glad --api='gl:core=4.6,gles2=3.2' --out-path build c --loader --mx --mx-global
+```
+
 ---
 
 glad
