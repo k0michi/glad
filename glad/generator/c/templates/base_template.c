@@ -24,7 +24,7 @@ extern "C" {
 {% block variables %}
 {% if options.mx_global %}
 {% call template_utils.zero_initialized() %}Glad{{ feature_set.name|api }}Context {{ global_context }}_static{% endcall %}
-Glad{{ feature_set.name|api }}Context* {{ global_context }} = &{{ global_context }}_static;
+_Thread_local Glad{{ feature_set.name|api }}Context* {{ global_context }} = &{{ global_context }}_static;
 {% endif %}
 {% endblock %}
 
